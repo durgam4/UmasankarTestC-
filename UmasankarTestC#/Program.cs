@@ -31,7 +31,7 @@ bethany.ReceiveWage();
 Console.WriteLine("Creating an employee");
 Console.WriteLine("--------------------\n");
 
-Employee george = new("George", "Jones", "george@gmail.com", new DateTime(1984, 3, 28), 30);
+Employee george = new("George", "Jones", "george@snowball.be", new DateTime(1984, 3, 28), 30);
 
 george.DisplayEmployeeDetails();
 george.PerformWork();
