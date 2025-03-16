@@ -7,4 +7,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="BethanysPieShopHRM.Logic">
+      <HintPath>..\..\c-sharp-10-fundamentals\m9\BethanysPieShopHRM.Logic.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Accounting\" />
+  </ItemGroup>
+
 </Project>

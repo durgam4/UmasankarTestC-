@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UmasankarTestC.HR;
+using BethanysPieShopHRM.Logic;
 
-namespace BethanysPieShopHRM
+namespace HR
 {
     internal class Employee
     {
@@ -17,7 +19,8 @@ namespace BethanysPieShopHRM
         public double hourlyRate;
 
         public DateTime birthDay;
-
+        public static double taxRate = 0.25;
+        private EmployeeType employeeType;
         const int minimalHoursWorkedUnit = 1;
 
         public Employee(string first, string last, string em, DateTime bd, double rate)
@@ -47,7 +50,22 @@ namespace BethanysPieShopHRM
 
         public double ReceiveWage(bool resetHours = true)
         {
-            wage = numberOfHoursWorked * hourlyRate;
+            double wageBeforeTax = 0.0;
+
+
+            if (employeeType == EmployeeType.Manager)
+            {
+                Console.WriteLine($"An extra was added to the wage since {firstName} is a manager!");
+                wageBeforeTax = numberOfHoursWorked * hourlyRate * 1.25;
+            }
+            else
+            {
+                wageBeforeTax = numberOfHoursWorked * hourlyRate;
+            }
+
+            double taxAmount = wageBeforeTax * taxRate;
+
+            wage = wageBeforeTax - taxAmount;
 
             Console.WriteLine($"{firstName} {lastName} has received a wage of {wage} for {numberOfHoursWorked} hour(s) of work.");
 
@@ -57,9 +75,17 @@ namespace BethanysPieShopHRM
             return wage;
         }
 
+        
         public void DisplayEmployeeDetails()
         {
-            Console.WriteLine($"\nFirst name: \t{firstName}\nLast name: \t{lastName}\nEmail: \t\t{email}\nBirthday: \t{birthDay.ToShortDateString()}\n");
+            Console.WriteLine($"\nFirst name: \t{firstName}\nLast name: \t{lastName}\nEmail: \t\t{email}\nBirthday: \t{birthDay.ToShortDateString()}\n TaxRate:\t {taxRate}");
+        }
+
+        public double CalculateWage()
+        {
+            WageCalculations wageCalculations = new WageCalculations();
+            double calculatedvalue = wageCalculations.ComplexWageCalculation(wage,  taxRate,3, 50);
+            return calculatedvalue;
         }
     }
 }
