@@ -1,4 +1,4 @@
-﻿namespace BethanysPieShopHRM.Accounting
+﻿namespace UmasankarTestC.Accounting
 {
     public class Customer
     {

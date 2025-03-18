@@ -16,3 +16,4 @@ C:\Repos\UmasankarTestC#\UmasankarTestC#\obj\Debug\net8.0\ref\UmasankarTestC#.dl
 C:\Repos\UmasankarTestC#\UmasankarTestC#\bin\Debug\net8.0\BethanysPieShopHRM.Logic.dll
 C:\Repos\UmasankarTestC#\UmasankarTestC#\obj\Debug\net8.0\UmasankarTestC#.csproj.AssemblyReference.cache
 C:\Repos\UmasankarTestC#\UmasankarTestC#\obj\Debug\net8.0\Umasanka.5EFBAA66.Up2Date
+C:\Repos\UmasankarTestC#\UmasankarTestC#\bin\Debug\net8.0\Newtonsoft.Json.dll

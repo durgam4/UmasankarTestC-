@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UmasankarTestC.HR
+namespace UmasankarTestC
 {
-    enum EmployeeType
+   public enum EmployeeType
     {
         Sales,
         Manager,

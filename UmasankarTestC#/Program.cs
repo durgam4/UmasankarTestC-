@@ -1,6 +1,6 @@
 ﻿
 
-using HR;
+
 using BethanysPieShopHRM.Logic;
 
 using UmasankarTestC;
@@ -21,7 +21,7 @@ bethany.PerformWork();
 double receivedWageBethany = bethany.ReceiveWage(true);
 Console.WriteLine($"Wage paid (message from Program): {receivedWageBethany}");
 
-bethany.firstName = "John";
+bethany.FirstName = "John";
 bethany.hourlyRate = 10;
 
 bethany.DisplayEmployeeDetails();
@@ -34,7 +34,7 @@ bethany.CalculateWage();
     Console.WriteLine("Creating an employee");
 Console.WriteLine("--------------------\n");
 
-Employee george = new("George", "Jones", "george@snowball.be", new DateTime(1984, 3, 28), 30);
+Employee george = new("George", "Jones", "george@snowball.be", new DateTime(1984, 3, 28), 39);
 
 george.DisplayEmployeeDetails();
 george.PerformWork();
@@ -42,8 +42,27 @@ george.PerformWork();
 george.PerformWork(3);
 george.PerformWork();
 george.PerformWork(8);
-
+george.GiveBonus();
 var receivedWageGeorge = george.ReceiveWage(true);
+
+Manager umasankar = new("Umasankar", "Durgam","durgam4@gmail.com", new DateTime(1984, 3, 28), 40);
+umasankar.AttendManagementMeeting();
+umasankar.AttendManagementMeeting();
+umasankar.GiveBonus();
+umasankar.PerformWork();
+umasankar.PerformWork(5);
+
+umasankar.CalculateWage();
+umasankar.ReceiveWage();
+//umasankar.CalculateBonus(5);
+umasankar.CalculateBonusAndBonusTax(umasankar.CalculateBonus(5), out int bonusTax);
+umasankar.GiveBonus();
+umasankar.GiveCompliment();
+
+umasankar.DisplayEmployeeDetails();
+
+
+
 
 
 Console.WriteLine("Welcome to Bethany's Pie Shop HRM");
@@ -77,14 +96,14 @@ Console.WriteLine($"Yearly wage: {yearlyWage}");
 
 //Utilities.ParsingStrings();
 
-WorkTask task; 
-task.description = "Clean the floor";
-task.hours = 4;
-task.PerformWorkTask();
 
-WorkTask task2 = new WorkTask("Clean the toilet", 2);
-var x2 = task2.PerformWorkTask();
-Console.WriteLine(x2);
+WorkTask task1 = new("Clean the Floor", 4);
+
+task1.PerformWorkTask();
+
+WorkTask task2 = new("Clean the toilet",2);
+task2.PerformWorkTask();
+
 
 Console.WriteLine("First Branch Testing Github");
 

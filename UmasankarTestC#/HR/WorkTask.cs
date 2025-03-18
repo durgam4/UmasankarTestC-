@@ -4,24 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HR
+namespace UmasankarTestC
 {
-    internal  struct WorkTask
+    struct WorkTask
     {
-        public string description;
-        public int hours;
+        private string description;
+        private int hours;
 
-        public  WorkTask(string description, int hours)
+        public WorkTask(string v1, int v2) : this()
         {
-             this.description = description;
-            this.hours = hours;
-
+            this.description = v1;
+            this.hours = v2;
         }
-        public string PerformWorkTask()
-        {
-            Console.WriteLine($"Task: {description} has been completed in {hours} hours.");
-            return "Amazing Work";
-        }   
 
+       
+
+        public void  PerformWorkTask()
+        {
+            Console.WriteLine($"Task {description} of {hours} hour(s) has been performed.");
+        }
     }
 }
