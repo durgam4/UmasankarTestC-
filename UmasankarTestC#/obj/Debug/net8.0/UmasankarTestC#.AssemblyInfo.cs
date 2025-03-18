@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UmasankarTestC#")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c806817f272457f5253f32b2fb406774a35e22f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+739c5bb8ba83ed181683152cd263b8a912104fa2")]
 [assembly: System.Reflection.AssemblyProductAttribute("UmasankarTestC#")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UmasankarTestC#")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
