@@ -12,7 +12,7 @@ Employee bethany = new Employee("Bethany", "Smith", "bethany@snowball.be", new D
 
 
 bethany.DisplayEmployeeDetails();
-
+Console.WriteLine("--------------------\n");
 bethany.PerformWork();
 bethany.PerformWork();
 bethany.PerformWork(5);
